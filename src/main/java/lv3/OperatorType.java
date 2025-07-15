@@ -8,7 +8,7 @@ public enum OperatorType {
 
     private final char operator;
 
-    // enum 생성자
+    // enum 생성자 (실제로 쓸일은 없지만 내부적으로 사용됨)
     OperatorType(char operator) {
         this.operator = operator;
     }

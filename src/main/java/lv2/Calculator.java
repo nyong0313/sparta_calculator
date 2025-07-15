@@ -21,29 +21,26 @@ public class Calculator {
         return result;
     }
 
-    public void calculate () throws ArithmeticException, Exception {
+    public void calculate () {
         switch (operator) {
             case '+':
                 result = a + b;
-                arrayList.add(result);
                 break;
             case '-':
                 result = a - b;
-                arrayList.add(result);
                 break;
             case '*':
                 result = a * b;
-                arrayList.add(result);
                 break;
             case '/':
                 if(b == 0) throw new ArithmeticException();
 
                 result = a / b;
-                arrayList.add(result);
                 break;
             default:
-                throw new Exception();
+                throw new IllegalArgumentException();
         }
+        arrayList.add(result);
     }
 
     public void removeResult() {

@@ -2,6 +2,7 @@ package lv3;
 
 import java.util.*;
 
+// T라고 하면 뭐든 다 들어올 수 있는데, 계산기니까 넘버만 들어올 수 있게
 public class ArithmeticCalculator<T extends Number> {
     private T a, b;
     char operator;
@@ -14,29 +15,26 @@ public class ArithmeticCalculator<T extends Number> {
     }
 
     private double result;
-    public void calculate () throws ArithmeticException, Exception {
+    public void calculate (){
         switch (OperatorType.getOperator(operator)) {
             case PLUS:
                 result = a.doubleValue() + b.doubleValue();
-                arrayList.add(result);
                 break;
             case MINUS:
                 result = a.doubleValue() - b.doubleValue();
-                arrayList.add(result);
                 break;
             case MULTIPLY:
                 result = a.doubleValue() * b.doubleValue();
-                arrayList.add(result);
                 break;
             case DIVIDE:
-                if(b.intValue() == 0) throw new ArithmeticException();
+                if(b.intValue() == 0) throw new ArithmeticException("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
 
                 result = a.doubleValue() / b.doubleValue();
-                arrayList.add(result);
                 break;
             default:
-                throw new Exception();
+                throw new IllegalArgumentException("오류: 정확히 입력해주세요.");
         }
+        arrayList.add(result);
     }
 
     public void getLargerResult(T n) {

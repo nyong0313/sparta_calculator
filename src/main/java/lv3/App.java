@@ -32,7 +32,7 @@ public class App {
             ArithmeticCalculator<Double> arithmeticCalculator = new ArithmeticCalculator<>(operator, inputNumber[1], inputNumber[2]);
             try {
                 arithmeticCalculator.calculate();
-            } catch (Exception e) {
+            } catch (RuntimeException e) {
                 System.out.println(e.getMessage());
             }
 
