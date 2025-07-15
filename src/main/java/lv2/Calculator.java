@@ -1,11 +1,11 @@
 package lv2;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Calculator {
     int a, b, result = 0;
     char operator;
-    ArrayList<Integer> arrayList =  new ArrayList<>();
+    private final List<Integer> arrayList =  new ArrayList<>();
 
     public void setA(int a) {
         this.a = a;

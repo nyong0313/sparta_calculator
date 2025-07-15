@@ -1,11 +1,11 @@
 package lv3;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class ArithmeticCalculator<T extends Number> {
     private T a, b;
     char operator;
-    ArrayList<Double> arrayList =  new ArrayList<>();
+    private final List<Double> arrayList =  new ArrayList<>();
 
     ArithmeticCalculator(char operator, T a, T b) {
         this.operator = operator;
