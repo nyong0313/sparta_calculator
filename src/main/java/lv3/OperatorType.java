@@ -31,26 +31,3 @@ public enum OperatorType {
         return false;
     }
 }
-
-//public enum OperatorType {
-//    PLUS("+", (a, b) -> a + b),
-//    MINUS("-", (a, b) -> a - b),
-//    MULTIPLY("*", (a, b) -> a * b),
-//    DIVIDE("/", (a, b) -> {
-//        if (b == 0) throw new ArithmeticException("0으로 나눌 수 없습니다.");
-//        return a / b;
-//    });
-//
-//    private final String operator;
-//    private final BiFunction<T, U, R> biFunction;
-//
-//    // enum 생성자
-//    OperatorType(String operator, BiFunction<T, U, R> biFunction) {
-//        this.operator = operator;
-//        this.biFunction = biFunction;
-//    }
-//
-//    public String getOperator() {
-//        return operator;
-//    }
-//}
